@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7213EFFE-B46D-4AB7-B9FA-92659F82F022}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Fisiomèdic</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>C:\Documents and Settings\MonicaJoan\Escritorio\BaseComp\</OutputPath>
+    <DocumentationFile>Fisiomèdic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Desktop\BaseComp\</OutputPath>
+    <DocumentationFile>Fisiomèdic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Autentificacio.designer.vb">
+      <DependentUpon>Autentificacio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Autentificacio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caixa.Designer.vb">
+      <DependentUpon>Caixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Caixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClubsEsportius.Designer.vb">
+      <DependentUpon>ClubsEsportius.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClubsEsportius.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aptitut.Designer.vb">
+      <DependentUpon>Aptitut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Aptitut.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodiBarres.Designer.vb">
+      <DependentUpon>CodiBarres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CodiBarres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeApte.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeApte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Imprimint.Designer.vb">
+      <DependentUpon>Imprimint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Imprimint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terapeutes.Designer.vb">
+      <DependentUpon>Terapeutes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Terapeutes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaMutua.Designer.vb">
+      <DependentUpon>NovaMutua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NovaMutua.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovaEntradaCaixa.Designer.vb">
+      <DependentUpon>NovaEntradaCaixa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NovaEntradaCaixa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LlistatRecos.Designer.vb">
+      <DependentUpon>LlistatRecos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LlistatRecos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeLlistatsRecos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeLlistatsRecos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImprimirEcg.Designer.vb">
+      <DependentUpon>ImprimirEcg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirEcg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeureEcgRepos.Designer.vb">
+      <DependentUpon>VeureEcgRepos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VeureEcgRepos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeRecoNoConforme.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeRecoNoConforme.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InformeLopdRecos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeLopdRecos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Equips.Designer.vb">
+      <DependentUpon>Equips.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equips.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarFactura.Designer.vb">
+      <DependentUpon>ModificarFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarConcepteFactura.Designer.vb">
+      <DependentUpon>ModificarConcepteFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarConcepteFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarEquip.Designer.vb">
+      <DependentUpon>ModificarEquip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEquip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouEquip.Designer.vb">
+      <DependentUpon>NouEquip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NouEquip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeFactures.vb">
+      <DependentUpon>InformeFactures.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="InformeImprimirFactures.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeImprimirFactures.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ErgometriaInforme.Designer.vb">
+      <DependentUpon>ErgometriaInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ErgometriaInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimirReco.Designer.vb">
+      <DependentUpon>ImprimirReco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirReco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeReco.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeReco.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImprimirInforme.Designer.vb">
+      <DependentUpon>ImprimirInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeCapçalera.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeCapçalera.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InformeMedic.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeMedic.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubInformeFactura.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubInformeFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InformeFactura.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DetallEpisodi.Designer.vb">
+      <DependentUpon>DetallEpisodi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetallEpisodi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallFactura.Designer.vb">
+      <DependentUpon>DetallFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetallFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallInforme.Designer.vb">
+      <DependentUpon>DetallInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetallInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallMutua.Designer.vb">
+      <DependentUpon>DetallMutua.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DetallMutua.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Episodis.Designer.vb">
+      <DependentUpon>Episodis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Episodis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factures.designer.vb">
+      <DependentUpon>Factures.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Factures.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CanviarContrasenya.Designer.vb">
+      <DependentUpon>CanviarContrasenya.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CanviarContrasenya.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimirFactura.Designer.vb">
+      <DependentUpon>ImprimirFactura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimirFactura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuari.Designer.vb">
+      <DependentUpon>ModificarUsuari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestioUsuaris.Designer.vb">
+      <DependentUpon>GestioUsuaris.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GestioUsuaris.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModValidacioDni.vb" />
+    <Compile Include="TramitsUsuari.Designer.vb">
+      <DependentUpon>TramitsUsuari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TramitsUsuari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoEstadiMaduratiu.Designer.vb">
+      <DependentUpon>InfoEstadiMaduratiu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoEstadiMaduratiu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inici.Designer.vb">
+      <DependentUpon>Inici.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inici.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarEpisodi.Designer.vb">
+      <DependentUpon>InsertarEpisodi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarEpisodi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModCalcularData.vb" />
+    <Compile Include="ModComprovarUsuari.vb" />
+    <Compile Include="ModEncriptarDades.vb" />
+    <Compile Include="ModExecutarSql.vb" />
+    <Compile Include="ModFacturesConsecutives.vb" />
+    <Compile Include="ModificarAssistencia.Designer.vb">
+      <DependentUpon>ModificarAssistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAssistencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModUsuariExisteix.vb" />
+    <Compile Include="Mutues.Designer.vb">
+      <DependentUpon>Mutues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mutues.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NivellMaduratiu.Designer.vb">
+      <DependentUpon>NivellMaduratiu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NivellMaduratiu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouEpisodi.Designer.vb">
+      <DependentUpon>NouEpisodi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NouEpisodi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouInforme.Designer.vb">
+      <DependentUpon>NouInforme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NouInforme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouPacient.designer.vb">
+      <DependentUpon>NouPacient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NouPacient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NouUsuari.Designer.vb">
+      <DependentUpon>NouUsuari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NouUsuari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReconeixementMedic.Designer.vb">
+      <DependentUpon>ReconeixementMedic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReconeixementMedic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistreErgo.Designer.vb">
+      <DependentUpon>RegistreErgo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistreErgo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariablesPubliques.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Aptitut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Aptitut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autentificacio.resx">
+      <DependentUpon>Autentificacio.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caixa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Caixa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanviarContrasenya.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CanviarContrasenya.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClubsEsportius.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClubsEsportius.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodiBarres.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CodiBarres.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeApte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeApte.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Imprimint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LlistatRecos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LlistatRecos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeLlistatsRecos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeLlistatsRecos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirEcg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImprimirEcg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaEntradaCaixa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NovaEntradaCaixa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaMutua.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NovaMutua.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Terapeutes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Terapeutes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeureEcgRepos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VeureEcgRepos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeRecoNoConforme.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeRecoNoConforme.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeLopdRecos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeLopdRecos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equips.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Equips.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarConcepteFactura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModificarConcepteFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEquip.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModificarEquip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarFactura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModificarFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouEquip.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NouEquip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeFactures.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeFactures.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeImprimirFactures.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeImprimirFactures.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErgometriaInforme.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErgometriaInforme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirReco.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImprimirReco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeReco.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeReco.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirInforme.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImprimirInforme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeCapçalera.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeCapçalera.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeMedic.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeMedic.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInformeFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubInformeFactura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeFactura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallEpisodi.resx">
+      <DependentUpon>DetallEpisodi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallFactura.resx">
+      <DependentUpon>DetallFactura.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallInforme.resx">
+      <DependentUpon>DetallInforme.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallMutua.resx">
+      <DependentUpon>DetallMutua.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Episodis.resx">
+      <DependentUpon>Episodis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factures.resx">
+      <DependentUpon>Factures.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimirFactura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImprimirFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestioUsuaris.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GestioUsuaris.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoEstadiMaduratiu.resx">
+      <DependentUpon>InfoEstadiMaduratiu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inici.resx">
+      <DependentUpon>Inici.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarEpisodi.resx">
+      <DependentUpon>InsertarEpisodi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAssistencia.resx">
+      <DependentUpon>ModificarAssistencia.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuari.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModificarUsuari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mutues.resx">
+      <DependentUpon>Mutues.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivellMaduratiu.resx">
+      <DependentUpon>NivellMaduratiu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouEpisodi.resx">
+      <DependentUpon>NouEpisodi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouInforme.resx">
+      <DependentUpon>NouInforme.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouPacient.resx">
+      <DependentUpon>NouPacient.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NouUsuari.resx">
+      <DependentUpon>NouUsuari.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReconeixementMedic.resx">
+      <DependentUpon>ReconeixementMedic.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistreErgo.resx">
+      <DependentUpon>RegistreErgo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TramitsUsuari.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TramitsUsuari.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

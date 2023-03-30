@@ -1,0 +1,3 @@
+C:\Users\fisio\Desktop\RECUPERACIÍO\40gb\BaseDeDades\BaseDeDades\obj\Debug\Fisiomèdic.exe
+C:\Users\fisio\Desktop\RECUPERACIÍO\40gb\BaseDeDades\BaseDeDades\obj\Debug\Fisiomèdic.xml
+C:\Users\fisio\Desktop\RECUPERACIÍO\40gb\BaseDeDades\BaseDeDades\obj\Debug\Fisiomèdic.pdb
